@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Question Paper with Score Calculation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .question {
+            margin: 20px 0;
+        }
+        .options {
+            margin-left: 20px;
+        }
+    </style>
+    <script>
+        // Display an alert when the page loads
+        window.onload = function() {
+            alert("Welcome to the Question Paper!");
+        };
+
+        // Function to ask for the user's name with a prompt dialog
+        function askName() {
+            var name = prompt("What is your name?");
+            if (name != null) {
+                document.getElementById("userName").innerText = "Hello, " + name + "!";
+            }
+        }
+
+        // Correct answers array
+        const correctAnswers = {
+            q1: "a", // Paris
+            q2: "b", // Albert Einstein
+            q3: "c", // Jupiter
+            q4: "b", // Nitrogen
+            q5: "a", // H2O
+            q6: "b", // Japan
+            q7: "b", // Cell
+            q8: "a", // William Shakespeare
+            q9: "b", // Diamond
+            q10: "b" // Python
+        };
+
+        // Function to calculate the score
+        function calculateScore(event) {
+            event.preventDefault(); // Prevent form submission
+
+            let score = 0;
+            let totalQuestions = 10;
+
+            // Loop through each question
+            for (let i = 1; i <= totalQuestions; i++) {
+                let questionName = "q" + i;
+                let selectedOption = document.querySelector(`input[name="${questionName}"]:checked`);
+                
+                if (selectedOption && selectedOption.value === correctAnswers[questionName]) {
+                    score++;
+                }
+            }
+
+            // Show the final score using an alert
+            alert("You scored " + score + " out of " + totalQuestions + ".");
+        }
+    </script>
+</head>
+<body onload="askName()">
+    <h1>Question Paper</h1>
+
+    <h2 id="userName"></h2> <!-- Will display user's name here -->
+
+    <form onsubmit="calculateScore(event)">
+        <!-- Question 1 -->
+        <div class="question">
+            <p>1. What is the capital of France?</p>
+            <div class="options">
+                <input type="radio" name="q1" value="a"> a) Paris<br>
+                <input type="radio" name="q1" value="b"> b) London<br>
+                <input type="radio" name="q1" value="c"> c) Rome<br>
+                <input type="radio" name="q1" value="d"> d) Berlin<br>
+            </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question">
+            <p>2. Who developed the theory of relativity?</p>
+            <div class="options">
+                <input type="radio" name="q2" value="a"> a) Isaac Newton<br>
+                <input type="radio" name="q2" value="b"> b) Albert Einstein<br>
+                <input type="radio" name="q2" value="c"> c) Galileo Galilei<br>
+                <input type="radio" name="q2" value="d"> d) Marie Curie<br>
+            </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question">
+            <p>3. What is the largest planet in our solar system?</p>
+            <div class="options">
+                <input type="radio" name="q3" value="a"> a) Earth<br>
+                <input type="radio" name="q3" value="b"> b) Mars<br>
+                <input type="radio" name="q3" value="c"> c) Jupiter<br>
+                <input type="radio" name="q3" value="d"> d) Saturn<br>
+            </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="question">
+            <p>4. Which element is essential for the formation of proteins?</p>
+            <div class="options">
+                <input type="radio" name="q4" value="a"> a) Oxygen<br>
+                <input type="radio" name="q4" value="b"> b) Nitrogen<br>
+                <input type="radio" name="q4" value="c"> c) Carbon<br>
+                <input type="radio" name="q4" value="d"> d) Hydrogen<br>
+            </div>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="question">
+            <p>5. What is the chemical symbol for water?</p>
+            <div class="options">
+                <input type="radio" name="q5" value="a"> a) H2O<br>
+                <input type="radio" name="q5" value="b"> b) O2<br>
+                <input type="radio" name="q5" value="c"> c) CO2<br>
+                <input type="radio" name="q5" value="d"> d) N2<br>
+            </div>
+        </div>
+
+        <!-- Question 6 -->
+        <div class="question">
+            <p>6. Which country is known as the Land of the Rising Sun?</p>
+            <div class="options">
+                <input type="radio" name="q6" value="a"> a) China<br>
+                <input type="radio" name="q6" value="b"> b) Japan<br>
+                <input type="radio" name="q6" value="c"> c) India<br>
+                <input type="radio" name="q6" value="d"> d) South Korea<br>
+            </div>
+        </div>
+
+        <!-- Question 7 -->
+        <div class="question">
+            <p>7. What is the smallest unit of life?</p>
+            <div class="options">
+                <input type="radio" name="q7" value="a"> a) Atom<br>
+                <input type="radio" name="q7" value="b"> b) Cell<br>
+                <input type="radio" name="q7" value="c"> c) Molecule<br>
+                <input type="radio" name="q7" value="d"> d) Tissue<br>
+            </div>
+        </div>
+
+        <!-- Question 8 -->
+        <div class="question">
+            <p>8. Who wrote the play 'Romeo and Juliet'?</p>
+            <div class="options">
+                <input type="radio" name="q8" value="a"> a) William Shakespeare<br>
+                <input type="radio" name="q8" value="b"> b) Charles Dickens<br>
+                <input type="radio" name="q8" value="c"> c) Jane Austen<br>
+                <input type="radio" name="q8" value="d"> d) Mark Twain<br>
+            </div>
+        </div>
+
+        <!-- Question 9 -->
+        <div class="question">
+            <p>9. What is the hardest natural substance on Earth?</p>
+            <div class="options">
+                <input type="radio" name="q9" value="a"> a) Gold<br>
+                <input type="radio" name="q9" value="b"> b) Diamond<br>
+                <input type="radio" name="q9" value="c"> c) Iron<br>
+                <input type="radio" name="q9" value="d"> d) Graphite<br>
+            </div>
+        </div>
+
+        <!-- Question 10 -->
+        <div class="question">
+            <p>10. Which of these languages is a programming language?</p>
+            <div class="options">
+                <input type="radio" name="q10" value="a"> a) HTML<br>
+                <input type="radio" name="q10" value="b"> b) Python<br>
+                <input type="radio" name="q10" value="c"> c) English<br>
+                <input type="radio" name="q10" value="d"> d) Spanish<br>
+            </div>
+        </div>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
