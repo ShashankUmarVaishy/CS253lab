@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="intro">
+        <h1>_Lab-8_</h1>
+        <br>
+        <h4>Create various user defined functions to perform some arithmetic operations. </h4>
+        <br>
+        <h6>We,ve created a simple calculator demonstrating simple arithmatic operations usiong JavaScript.</h6>
+    </div>
+    <div class="calc">
+        <h4>Calculator: HX-101u</h4>
+        <div class="inputs">
+            <input type="text" id="num1" class="calcInput" placeholder="Enter first number" />
+            <input type="text" id="num2" class="calcInput" placeholder="Enter second number" />
+        </div>
+        <div class="calc-keys">
+            <button type="button" class="btn" onclick="calculate('+')">+</button>
+            <button type="button" class="btn" onclick="calculate('-')">-</button>
+            <button type="button" class="btn" onclick="calculate('*')">*</button>
+            <button type="button" class="btn" onclick="calculate('/')">/</button>
+        </div>
+        <div class="result">
+            <p>Result: <span id="result"></span></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
