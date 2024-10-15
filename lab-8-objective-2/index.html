@@ -6,19 +6,42 @@
     <title>SlideShow && Animation</title>
     <link rel="stylesheet" href="style.css">
     
+    
 </head>
 <body>
-    <div class="intro">
-        <h1>_Lab-8_</h1>
+    <h1> JavaScript program to create an image slideshow, simple animations using JavaScript</h1>
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="src/img1.jpg" >
+          <div class="text">HASHIRAS</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="src/img2.jpeg" >
+          <div class="text">DEMONS</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="src/img3.jpg" >
+          <div class="text">PROTAGONISTS</div>
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+        
+        </div>
         <br>
-        <h4>Create an image slide-show using Java Script </h4>
-        <br>
-        <h6>We,ve created a simple slide show demonstrating simple animation usiong JavaScript.</h6>
-    </div>
-    <div class="img">
-        <h3>_SlideShow_</h3>
-    <img name="slide" src=""  id="image">
-    </div>
-    <script src="web.js"></script>
+        
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+        
+        <script src="web.js"></script>
 </body>
 </html>
