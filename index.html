@@ -4,57 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>B23CS019</title>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@498&display=swap" rel="stylesheet">
     <style>
+       
         *{
+            box-sizing: border-box;
             padding: 0;
-            margin: 0;
+            margin: 0;  
+            font-family:"Baloo Bhai 2"; 
         }
         body{
-            background-color: #3c6e71;
+           
+        }
+        .container{
             display: flex;
             flex-direction: column;
-            
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url(pexels-cmonphotography-1809644.jpg);
+            background-size: cover;
+          
         }
         h1,h3,h5{
             text-align: center;
         }
         .intro{
-            background-color: #d9d9d9;
-            border: 2px solid #353535;
-            width: fit-content;
             padding: 1rem;
-            border-radius: 1rem;
-            margin: auto;
+            background-color: rgba(255, 255, 255, 0.185);
+            border-radius: 2rem;
+            box-shadow: 5px 10px rgba(0, 0, 0, 0.291);
+            
         }
         .labs{
             display: flex;
-            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            height: fit-content;
+            width: 60vw;
             
-            width: fit-content;
-           
-            border: 3px solid #353535;
             padding: 5px;
-            border-radius: 1rem;
-            background-color: white;
+          
         }
+        @keyframes moveUp{
+            0%{
+                transform: translateY(0);
+            }
+            30%{
+                transform: translateY(-5px);
+            }
+           70%{
+                transform: translateY(0);
+            }
+        }
+
         a{
             padding: 5px;
+            text-align: center;
             width: fit-content;
-            border: 3px solid #353535;
+            border: 0.5px solid #353535;
             border-radius: 1rem;
             color: black;
-            background-color: rgb(94, 129, 122);
+            margin: 10px 5px;
+            background-color: rgba(0, 0, 0, 0.093);
+            box-shadow: 2px 4px rgba(0, 0, 0, 0.291);
         }
+        a:hover{
+           animation: moveUp 1s 1;
+        }
+       
     </style>
 </head>
 <body>
+    <div class="container">
     <div class="intro">
         <h1>Shashank Umar Vaishy</h1>
         <h3>B23CS019</h3>
         <h5>IWT lab</h5>
     </div>
+    <h3>IWT labs here:</h3>
     <div class="labs">
-                <h3>IWT labs here:</h3>
             <a href="lab-1/portfolio2.html">See lab 1 </a>
             <a href="lab2/index.html">See lab 2</a>
             <a href="lab-3/index.html">See lab 3</a>
@@ -62,10 +92,10 @@
             <a href="Lab-4+5/index.html">See lab 5</a>
             <a href="lab7/index.html">See lab 6</a>
             <a href="lab7/index.html">See lab 7</a>
-            <a href="Lab-8-objective-1/index.html">See lab 8->objective-1 </a>
-            <a href="lab-8-objective-2/index.html">See lab 8->objective-2 </a>
-        
+            <a href="Lab-8-objective-1/index.html">See lab 8->1 </a>
+            <a href="lab-8-objective-2/index.html">See lab 8->2 </a>
     </div>
+</div>
     
 </body>
 </html>
